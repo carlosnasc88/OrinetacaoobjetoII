@@ -9,21 +9,24 @@ namespace _07__Bytebank
         {
 
 
-            ContaCorrente conta = new ContaCorrente( 867,86711247);
+            ContaCorrente conta = new ContaCorrente(867,86711247);
+
             conta.Numero = 867;
             conta.Agencia = 86711247;
-
-
-
-
+            Console.WriteLine (ContaCorrente.TotaldeContasCriadas);
 
 
             Console.WriteLine(conta.Agencia);
+            Console.WriteLine(conta.Numero);
+
+            ContaCorrente contadoCarlos = new ContaCorrente(867, 86711247);
+            Console.WriteLine(ContaCorrente.TotaldeContasCriadas);
 
 
 
 
-             
+
+
             Console.ReadLine();
         }
     }

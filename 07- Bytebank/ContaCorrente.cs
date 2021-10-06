@@ -11,13 +11,15 @@ namespace _07__ByteBank
         private Cliente _titular;
 
         public Cliente Titular { get; set; }
+        public static int TotaldeContasCriadas { get; private set; }
+        
+
 
         private int _agencia;
         public int Agencia
         {
             get
             {
-
                 return _agencia;
             }
 
@@ -28,7 +30,6 @@ namespace _07__ByteBank
                 if (value <= 0) ;
                 {
                     return;
-
                 }
 
                 _agencia = value;
@@ -50,7 +51,6 @@ namespace _07__ByteBank
             get
             {
                 return _saldo;
-
             }
 
 
@@ -58,7 +58,6 @@ namespace _07__ByteBank
             {
                 if (value < 0)
                 {
-
                     return;
                 }
 
@@ -76,7 +75,7 @@ namespace _07__ByteBank
         {
             Agencia = agencia;
             Numero = numero;
-
+            TotaldeContasCriadas++;
         }
 
 
@@ -87,14 +86,12 @@ namespace _07__ByteBank
 
             if (_saldo < valor)
             {
-
                 return false;
             }
             else
             {
                 _saldo -= valor;
                 return true;
-
             }
         }
 
